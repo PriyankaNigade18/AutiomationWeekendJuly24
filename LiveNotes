@@ -1,0 +1,159 @@
+
+Variable
+=================
+Name of storage
+
+declare 
+==========
+datatype varname;
+int x;
+
+Initialize
+=================
+varname=data
+x=90;
+
+int x=90;
+
+Types of variable
+======================
+1.Local variable
+====================
+variable declare inside a method
+scope: within a method only
+memory allocated: at the time of method execution
+memory deallocated: After method executed
+
+
+2.Instance variable
+========================
+any variable declare inside class and outside any function/constructor/block
+
+Scope: With a Object
+
+Memory allocate: At the time of object creation
+Memory deallocate: Once object destroyed
+
+Note:
+============
+For every new object instance variable get the new memory
+
+3.static variable
+=========================
+Static keyword plays important role in Java
+static keyword used to proper memory management
+static-->variable/method/static block 
+
+any variable declare inside class and outside
+      any function/constructor/block using static keyword
+
+
+Scope: Within a Class
+Memory allocate: At the time of class loading
+Memory deallocate: Once the class unlloaded
+
+Note:
+===============
+Static variable get the memory one time and it can be used with multiple 
+time object.
+To call static data we dont need any object created
+
+Automation: to create special utility(Reusable code)
+
+
+======================================================
+Methods in Java
+======================
+1.Instance method
+=======================
+Any method declared without static keyword
+To call instance method we need Object
+
+Memory will allocate within object
+
+2.static method
+======================
+Any method declared with static keyword
+
+call
+===========
+1. In same class without object and without class name you can call
+2. In different class call static method using classname
+==============================================================
+Static block
+=================
+In Java to initialize static variables we need static block
+static block will always execute first
+
+static
+{
+
+}
+
+===========================================================
+DataTypes
+=================
+1.Primitive
+==================
+int ,byt,short,long,boolean,char,float,double
+
+2.NonPrimitive
+========================
+class
+Object
+
+String class
+array Object
+Arrays class
+
+
+========================================================
+28-07-2024
+================
+Git & Github
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
