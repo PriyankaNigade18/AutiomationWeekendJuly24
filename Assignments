@@ -5,3 +5,29 @@ Assignment1:
 ==================
 Create Employee class along with empid and empname.
 design show() and create 5 objects and print the employee details
+
+4-08-2024
+==============
+Assignment 1
+-------------------
+Write class names under given packages
+1.java.io
+2.java.lang
+3.java.util
+
+
+Assignment 2
+===================
+Create calculator1 class and declare 5 methods add(),sub(),mul(),div(), mod()
+and compile time parameter passing and print the result.
+Note: Complete the assignment without return keyword
+
+Create calculator2 class and declare 5 methods add(),sub(),mul(),div(), mod()
+and compile time parameter passing and print the result.
+Note: Complete the assignment with return keyword
+
+
+
+
+
+

@@ -110,6 +110,116 @@ Arrays class
 ========================================================
 28-07-2024
 ================
+Type Casting
+====================
+Conversion of one type of data into another type
+1.primitive to primitive
+===========================
+ 1.Implicit casting (Automatic casting-JVM)
+ 
+ 2.Explicit Casting(force full)
+ 
+ 
+ Wrapper class
+ ====================
+ Using Wrapper class we can store primitive data as Object
+ 
+ primitive			wrapper
+ ===========		============
+ int				Integer
+ byte				Byte
+ float				Float
+ boolean			Boolean
+ short				Short
+ char				Character
+ long				Long
+ double				Double
+ 
+ 
+ 
+ 
+ 
+ 
+2.Object to Primitive
+
+3.Primitive to Object
+ 
+===========================================
+4-08-2024
+=====================
+
+Parametrization in Methods
+=============================
+To create dynamic method we need to pass parameters to method
+
+1.Compile parameter passing
+
+2.Run time parameter passing/Accept data from user
+----------------------------
+Scanner class
+
+Ways
+===========
+Parameter passing without return keyword
+
+Parameter passing with return
+
+Call By value  Vs Call By reference
+
+
+This Keyword
+============
+
+Method Chaining/Builder pattern
+=================================
+
+
+/*
+	 * Polymorphism
+	 * ================
+	 * One thing in many form
+	 * 
+	 * purpose:
+	 * Method Reusability
+	 * Types
+	 * ===========
+	 * 1.Compile time Polymorphism(Method Overloading)
+	 * 2.Run time Polymorphism(Method Overriding)
+	 * 
+	 * Method Reusability
+	 *-----------------------
+	 *In java if you declare same name method with different signature 
+	 *then it is called Method overloading
+	 *Rules
+	 *-----
+	 *1.Number of arguments
+	 *2.Types of arguments
+	 *3.Change the order of arguments
+	 *
+	 * 
+	 * 
+	 * 
+	 */
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
 Git & Github
 
 
