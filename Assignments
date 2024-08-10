@@ -26,6 +26,13 @@ Create calculator2 class and declare 5 methods add(),sub(),mul(),div(), mod()
 and compile time parameter passing and print the result.
 Note: Complete the assignment with return keyword
 
+10-08-2024
+===================
+
+1. write a java program to read number from the user and test whether it is even or odd
+
+2. write a java program to read number from the user and test whether it is positive or negative
+
 
 
 
