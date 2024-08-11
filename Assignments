@@ -33,6 +33,19 @@ Note: Complete the assignment with return keyword
 
 2. write a java program to read number from the user and test whether it is positive or negative
 
+11-08-2024
+===============
+1. Write a java program where ask user to enter environment
+and if it is matching with (dev,prod,qa,stage) then user should get appropriate message like
+"Test is running in QA"
+
+
+
+
+
+
+
+
 
 
 
