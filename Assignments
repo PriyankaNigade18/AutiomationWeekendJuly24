@@ -40,7 +40,15 @@ and if it is matching with (dev,prod,qa,stage) then user should get appropriate 
 "Test is running in QA"
 
 
+24-08-2024
+===================
+1.Declare single dimensional array and accept data from user,Print the array then sort the array
+Arrays.sort
 
+2. create two two dimensional array and print the addition of both
+
+10 20      +    100 200    =   110 220
+30 40      +   300 400     =   330 440
 
 
 

@@ -202,6 +202,77 @@ Method Chaining/Builder pattern
 	 */
 
 
+===============================================
+24-08-2024
+=================
+Array
+============
+Array is static data structure
+Array implemented in java as Object
+Array is collection of Similar data types/Objects
+
+Array doesn't support any method
+
+Ways
+============
+1.Using new keyword
+2.Using literal
+
+Types
+============
+1.Single Dimensional 
+2.Multi Dimensional 
+
+Syntax:
+================
+1.Using new keyword
+
+datatype arryvariablename[]=new datatype[size];
+
+int sid[]=new int[5];
+
+array stores the element as per index value
+array index always starts with 0
+
+
+Syntax for multi dimensional
+====================================
+datatype arrname[][]=new datatype[size of row][size of cell];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
