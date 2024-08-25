@@ -241,8 +241,45 @@ datatype arrname[][]=new datatype[size of row][size of cell];
 
 
 
+==================================================
+25-08-2024
+=================
+1.Encapsulation
+=====================
+It is wrapping of data and function together
+Main purpose of encapsulation is data hiding/data security
+In Java we can declare variable as private and we can declare method as public
+using getters and setters
 
+2.Polymorphism
+=======================
+	 * One thing in many form
+	 * 
+	 * purpose:
+	 * Method Reusability
+	 
+	 * Types
+	 * ===========
+	 * 1.Compile time Polymorphism(Method Overloading)
+	 * 2.Run time Polymorphism(Method Overriding)
+	 * 
+	 * Method Reusability
+	 *-----------------------
+	 *In java if you declare same name method with different signature 
+	 *then it is called Method overloading
+	 *Rules
+	 *-----
+	 *1.Number of arguments
+	 *2.Types of arguments
+	 *3.Change the order of arguments
+	 *
+	 * 
 
+Topic to be complete....
+============================
+1.Constructor overloading
+2.main() overloading
+3.Real time scenarios
 
 
 
