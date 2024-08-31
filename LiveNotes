@@ -282,6 +282,111 @@ Topic to be complete....
 3.Real time scenarios
 
 
+====================================================
+31-08-2024
+===================
+Inheritance
+=================
+One class can access properties of another class is called Inheritance
+Parent class can access only parent properties
+Child class can access Parent + child properties
+
+In Java Object is super class
+
+Types:
+========
+1.Single level
+2.Multi level
+3.Hierarchical 
+4.Multiple inheritance
+5.Hybrid
+
+Multiple and Hybrid we can't implement directly in Java
+For this we have solution that is Interface.
+
+Purpose
+==============
+1.To avoid code duplication
+2.To Reuse Methods
+3.To achieve Run time polymorphism
+
+
+Run time Polymorphism
+============================
+Whenever we declare same method name with same syntax in Parent 
+and child class the parent class method always override by child class
+
+Method Overriding
+=========================
+1.Classes must be in IS -A relation
+2.method should have same name
+3.Method should have same number of argument and same type of argument
+
+Keywords
+==============
+1.super
+-======
+super keyword will help you to access any variable,method and constructor from immediate 
+parent
+
+2.final
+================
+1.final keyword to variable when we apply no one can change the data(fixed)
+2.final to method means no one can override that method
+3.final to class means no class can become subclass of final class
+
+How to design any immutable class like String
+==============================================
+Using final keyword
+
+
+AccessModifier
+===================
+protected
+
+====================================================
+Data Abstraction
+=========================
+We can hide internal mechanism of software from the user and we can provide
+only relevant features to user
+
+Purpose:
+==============
+Data/Information Hiding
+
+How To achieve In Java
+==============================
+1.Abstract class
+=========================
+- partial abstraction
+
+What is abstract class
+==========================
+A class declare with abstract keyword is class
+
+Abstract class can have implemented and non implemented(abstract) metod
+
+Any method design without body is called abstract method and in java
+we declare using abstract keyword
+
+Abstract is not fully implemnted so we cant create object of abstract class
+
+From abstract class any method has to be implement by child class
+So using child object we can access everything from Abstract class
+
+
+2.Interface
+===================
+- 100% abstraction
+
+
+
+
+
+
+
+
+
 
 
 
