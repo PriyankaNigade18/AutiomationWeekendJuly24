@@ -1,0 +1,53 @@
+
+Selenium WebDriver
+=============================
+Selenium WebDriver is an interface
+Selenium WebDriver is an API for webUI automation test
+================================================================
+Setup in Java Project
+======================
+1.create new java project
+2.Download selenium jar form selenium.dev
+3.right click on project--->build path--->configure build path-->
+libraries-->click on class path--->add external jar
+----->add selenium jar and apply and save
+
+------------------------------------------
+Setup in Maven Project
+================================
+1. create a maven project
+2. download dependecy
+3. add it to pom.xml 
+
+Maven is build management tool as well as Project management tool
+
+In Maven POM.xml file
+==============================
+POM is project object model 
+This is configuration file
+Entire project setup we can do inside POM.xml
+
+1.dependency(library-executable file)
+2.plugins(compiler/surefile plugins)
+
+Maven support two types of Repository
+=========================================
+1.Local repo
+===================
+Users/m2 folder
+
+2.Remote/central Repo
+=====================
+https://mvnrepository.com/
+
+=================================================================
+
+
+
+
+
+
+
+
+
+
