@@ -378,8 +378,16 @@ So using child object we can access everything from Abstract class
 2.Interface
 ===================
 - 100% abstraction
+It is special class It can have data which is static and final
+all the methods are by default public and abstract
 
 
+
+==============================
+Difference between Collection and Collections
+------------------------------------------
+Collection is interface
+Collections is a class which has all static method
 
 
 
