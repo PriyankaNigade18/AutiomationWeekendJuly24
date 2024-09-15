@@ -41,6 +41,253 @@ Users/m2 folder
 https://mvnrepository.com/
 
 =================================================================
+Test Case: Validate Google application title 
+Step1: Open Google application
+Step2: Get the current title of application
+Step3: Validate expected vs actual
+Step4: Display appropriate result
+Step5: close the browser
+
+====================================
+WebDriver Commands
+====================
+1.Browser commands
+2.Navigation commands
+3.WebElement commands
+
+
+1.Browser commands
+========================
+1.get(url)
+2.getTitle()
+3.getCurrentUrl()
+4.getPageSource()
+5.getWindowHandle()
+6.getWindowHandles()
+7.close()
+8.quit()
+
+Exceptions In Selenium
+================
+1.InvalidArgumentException: invalid argument
+for wrong url address
+
+2.NoSuchElementException
+if element not found
+Navigation commands
+=================================
+Selenium support Navigation interface
+navigate() is methods which return Navigation interface object
+
+1.to(url)
+=================
+driver.navigate().to(url)
+
+2.back()
+======================
+driver.navigate().back()
+
+3.forward()
+=======================
+driver.navigete().forward()
+
+4.refresh()
+=============================
+driver.navigate().refresh()
+
+What is WebElement in Selenium
+==========================================
+In general every UI element is WebElement
+like textbox,button,link,searchbox,checkbox,radiobutton....etc
+
+In technical word In selenium To interact with UI element we
+have WebElement as interface
+
+To interact with webelement
+===============================
+1.Identify webelement
+2.perform action on webelement
+
+
+How selenium identify webelement
+======================================
+Selenium identify webelement using locators
+
+What is locator?
+====================
+Locator is address of webelement from webpage
+Selenium support total 8 locators
+
+1.By id
+2.By name
+3.By className
+4.By linkText
+5.By parialLinkText
+6.By tagName
+
+Dynamic Locators
+====================
+7.By cssSelector
+8.By xpath
+
+What is By?
+================
+By is class in selenium
+By returns By class Object itself
+
+Using locator you will get address that address you need to pass to the method
+Identification method are:
+=================================
+1.findElement()
+=========================
+driver.findElement(By loc)
+- findElement() idenitify one single webelement
+- findElement() returns Webelement interface object
+- If any webelement not found this method throws exception
+NoSuchElementException.
+
+2.findElements()
+
+=============================================================
+
+WebElement actions
+==========================================
+textbox,searchbox---->type data---->sendKeys("data",Keys.ENTER)
+Keys is class in selenium
+To clear the text ------------------>clear()
+button,checkbox,link--->click------>click()
+
+=========================
+WebElement commands for validation
+===================================
+1.isDisplayed()
+2.isEnabled()
+3.isSelected() -checkbox,radio button
+
+===================================
+How to automate any hyperlink
+=================================
+<a id="SignIn" href="login.html">Sign In</a>
+<a> link text </a>
+
+1.linkText()=full text
+===================
+driver.findElement(By.linkText("Sign In"))
+
+2.partialLinkText()= partial text
+=====================================
+driver.findElement(By.partialLinkText("In"))
+
+What is Synchronization in Selenium
+===========================================
+tool and application must execute with time mapping.
+
+If  there is time mapping issue in between tool and application then it is called
+Synchronization issue in selenium
+
+Selenium Support two dynamic wait
+=================================
+1.Implicit Wait
+=========================
+- Is globally applicable for entire webelements on the page
+
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+Example
+===========
+Suppose element need 8sec to load
+Implicit timeout =10sec
+
+Once within 10sec of element found selenium will not wait remaining 2sec.
+It will continue with next element
+
+
+
+
+2.Explicit wait
+
+
+===============================================================
+
+By ClassName locator
+==========================
+
+class="oxd-button oxd-button--medium oxd-button--main orangehrm-login-button"
+
+InvalidSelectorException: Compound class names not permitted
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
