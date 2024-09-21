@@ -74,6 +74,7 @@ for wrong url address
 
 2.NoSuchElementException
 if element not found
+===================================================
 Navigation commands
 =================================
 Selenium support Navigation interface
@@ -147,6 +148,11 @@ driver.findElement(By loc)
 NoSuchElementException.
 
 2.findElements()
+==================
+driver.findElements(By loc)
+- findElements() method identify multiple webElements
+- findElements() returns List<WebElement>
+- if element not found it never throws exception 
 
 =============================================================
 
@@ -215,6 +221,257 @@ By ClassName locator
 class="oxd-button oxd-button--medium oxd-button--main orangehrm-login-button"
 
 InvalidSelectorException: Compound class names not permitted
+==============================================================
+21-09-2024
+==================
+By tagName
+=================
+tagName locator locates multiple similar elements
+
+Number of input boxes
+Number of images
+Number of Links
+
+WebElement Methods
+======================
+1.getText()
+===============
+It returns visible text of the element
+to get the html inner text we use this method
+
+2.getAttribute(attributename)
+=================================
+getAttribute() return attribute value
+
+Dynamic Locators
+========================
+1.By cssSelector
+=========================
+Css is cascaded style sheet is a language for providing styles to the webElement
+
+cssSelector is locator to identify webelement based on its attribute
+cssSelector is faster than xpath(as it travels only in one direction)
+parent tag--->child tag
+cssSelector have no method support
+cssSelector does not allowed indexing/Axies
+cssSelector supports special characters for(partial match (*),starts with (^),endswith($))
+
+1.tagname with id
+=======================
+syntax
+==========
+tagname#id
+
+<input id="input-email" class="form-control">
+
+input#input-email
+
+2.tagname with attribute
+==============================
+Syntax
+============
+tagname[attribute='value']
+
+<input  placeholder="Password" id="input-password" class="form-control">
+
+input[placeholder='Password']
+
+3.tagname with class name
+================================
+Syntax
+===========
+tagname.classname
+
+<input type="submit" value="Login" class="btn btn-primary">
+
+input.btn.btn-primary
+
+
+
+4.tagname with id,classname,attribute
+==============================================
+Syntax
+===============
+tagname#id.classname[attribute='value']
+
+email id
+===============
+<input type="text" name="email" value="" placeholder="E-Mail Address" id="input-email" class="form-control">
+input#input-email.form-control[placeholder='E-Mail Address']
+
+<input type="submit" value="Login" class="btn btn-primary">
+input.btn[value='Login']
+
+copied by DOM
+==================
+#input-email
+
+cssSelector with special characters
+=======================================
+<input type="text" name="email" value="" placeholder="E-Mail Address" id="input-email" class="form-control">
+1.partial match contains(*)
+==========================
+Syntax
+===========
+tagname[attribute*='partial value to match']
+input[id*='email']
+
+2.startsWith(^)-prefix value
+=======================
+<input  placeholder="Password" id="input-password" class="form-control">
+
+Syntax
+=========
+tagname[attribute ^='prefix value']
+
+input[placeholder ^='Pas']
+
+3.endsWith($)-suffix value
+=================
+<input type="submit" value="Login" class="btn btn-primary">
+
+syntax
+==============
+tagname[attribute $='suffix value']
+
+input[class $='primary']
+==================================================
+
+2.By xpath
+=================
+what is Xpath
+================
+Xpath is path of the webelement form html/xml page
+Xpath identify weblement directly from DOM
+Xpath can travel in both direction(forward and backward)
+Xpath supports multiple methods
+Xpath supports xpath axies/indexing
+
+
+
+What is DOM
+=================
+DOM is an API from WebBrowsers
+WebBrowsers open the webpage and load Document Object Model
+================HTML DOM=======================
+<html>---------------------root element/node
+<head>
+</head>
+
+<body>
+<input>
+<a>--------------------webelement
+<div>
+
+</body>
+</html>
+
+=====================================================
+Types of Xpath
+=================
+1.Absolute xpath
+===================
+- Absolute xpath identify weblement from the root element
+- Absolute xpath starts with '/'
+
+
+/html/body/div[2]/div/div/div/div[2]/div/form/div[1]/input
+
+2.Relative xpath
+===================
+- Relative xpath identify weblement from the attribute
+- Relative xpath starts with '//'
+
+//*[@id="input-email"]
+
+here * any tagname
+
+=============================================
+xpath Syntax:
+============
+//tagname[@attribute='value']
+
+Xpath with Operators
+-======================
+1.and
+===========
+syntax:
+=======
+//tagname[@attribute='value' and @attribute='value']
+
+//input[@name='lastname' and @class='form-control']
+
+2.or
+==============
+syntax:
+=======
+//tagname[@attribute='value' or @attribute='value']
+
+//input[@name='email' or @class='abcd']
+
+=========================================================
+Xpath with indexing/position()
+====================================
+//input[@class='form-control']----------------- 1 of 6
+
+Syntax:
+============
+(xpath)[index]
+
+(//input[@class='form-control'])[4]
+
+position()
+==============
+syntax:
+============
+(xpath)[position()=index]
+
+(//input[@class='form-control'])[position()=6]
+
+
+
+
+
+
+
+
+
+
+Xpath Methods
+
+
+Xpath Axies
+
+Relative Locators (Selenium 4 feature)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
