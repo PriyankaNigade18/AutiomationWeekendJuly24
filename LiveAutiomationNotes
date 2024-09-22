@@ -428,21 +428,214 @@ syntax:
 
 (//input[@class='form-control'])[position()=6]
 
-
-
-
-
-
-
-
-
-
+===============================================
 Xpath Methods
+==================
+1.text()
+========
+based on visible text we can identify element
 
+syntax:
+---------
+//tagname[text()='text']
+
+2.normalize-space()
+======================
+this method ignore white space like trim() and get/match the visible text
+Syntax:
+==========
+//tagname[normalize-space()='text']
+
+
+3.contains()-partail match
+===============================
+Syntax:
+=============
+//tagname[contains(@attribute,'partial value')]
+
+or
+//tagname[contains(text(),'partail text']
+
+
+4.starts-with()-prefix value
+==================================
+
+Syntax:
+=========
+//tagname[starts-with(@attribute,'prefix value')]
+
+=======================================================
 
 Xpath Axies
+================
+1.ancestor
+===============
+Syntax:
+==========
+//tagname[@attribute='value']//ancestor::ancestor tagname
 
+Identify Ancestor for John
+==========================
+//td[text()='John']//ancestor::tbody......1 of 1
+
+2.parent
+=============
+Syntax:
+==========
+//tagname[@attribute='value']//parent::parent tagname
+
+3.child
+============
+Syntax:
+==========
+//tagname[@attribute='value']//child::child tagname
+
+4.following
+=================
+Syntax:
+==========
+//tagname[@attribute='value']//following::following ele tagname
+
+5.following-sibling
+======================
+Syntax:
+==========
+//tagname[@attribute='value']//following-sibling::following sibling  tagname
+
+6.preceding
+==============
+Syntax:
+==========
+//tagname[@attribute='value']//preceding::preceding ele tagname
+
+7.preceding-sibling
+========================
+Syntax:
+==========
+//tagname[@attribute='value']//preceding-sibling::preceding-sibling ele tagname
+
+========================================================================
+
+<tbody>------------------------grand parent ancestor
+<tr>------------------parent
+ 
+         <td>4</td>
+
+          <td>John</td>----element child of tr
+
+          <td>Robinson</td>
+
+          <td>jr5527</td>
+ 
+         <td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a role="button" href="#myModal" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+
+        </tr>
+
+</tbody>
+
+==============================================================
 Relative Locators (Selenium 4 feature)
+=========================================
+below()
+above()
+near()
+toLeftOf()
+toRightOf()
+================================================
+WebElement Automation
+=======================
+dropdown automation
+==========================
+1.Select tag based dropdown
+=============================
+for <select> tag based dropdown
+
+Use Select class
+Select sc=new Select(dropdown ele address);
+
+Is dropdown support multiple selection?
+isMultiple()
+
+To perform single selection
+===========================
+1.selectByIndex()
+2.selctByVisibleText()
+3.selectByValue()
+
+
+To get All the options
+============================
+getOptions()
+
+2.BootStrap/JavaScript/dynamic Dropdown
+=================================
+xpath
+
+
+Calendar
+WebTable(static/dynamic)
+
+Window handling
+Alert handling
+Frame Handling
+
+Mouse Operations
+
+======================
+File Upload/Download
+Robot class(keyboard)
+=======================
+
+Capabilties
+===================
+Headless testing
+ignore notification
+to get timeout(pageloadtime,implicit,explicit)
+
+Framework:
+=============
+1.TestNG
+
+
+2.Cucumber
+
+
+How to design own framework(Hybrid framework design)
+========================================================
+
+Reporting
+===================
+1.Listners
+2.ExtentReport
+3.Allur Report
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
