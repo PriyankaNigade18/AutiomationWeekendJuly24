@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import com.Generic.Utility;
+
 public class AmazonDropdownAutomation {
   @Test
   public void testDropdown() throws InterruptedException
@@ -19,7 +21,12 @@ public class AmazonDropdownAutomation {
 	  
 	  //get the address of dropdown
 	  WebElement ddele=driver.findElement(By.name("url"));
+	  Utility.selectBasedDropdown(ddele,"Pet Supplies");
 	  
+	  
+	  
+	  
+	  /*
 	  //create an object for Select class
 	  Select sc=new Select(ddele);
 	  System.out.println("Is dropdown support multiple selection?: "+sc.isMultiple());
@@ -48,7 +55,7 @@ public class AmazonDropdownAutomation {
 	  	}
 	  
 	  
-	  
+	  */
 	  
 	  
 	  
