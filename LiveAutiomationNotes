@@ -591,15 +591,74 @@ Basic scenarios
 4.Specific Row data
 5.Specific Column data
 6.get all the data
-
-
-
-
+============================================
+29-09-2024
+===================
 Window handling
 =======================
+Multiple Window Handling
+-----------------------
+1.getWindowHandle(): String= Parent window session Id
+2.getWindowHandles(): Set<String>= Parent and child session Id
 
-Alert handling
+SwitchTo().target
+
+How to open New tab/New Window
+--------------------------------
+Selenium 4 new feature- newWindow()
+newWindow() return WebDriver interface object
+
+WebDriver ref=driver.switchTo().newWindow(WindowType.TAB);
+WebDriver ref=driver.switchTo().newWindow(WindowType.WINDOW);
+
+=========================================================
+
+Alert handling/pop up message
+====================================
+Alert interface is available in Selenium
+
+Types of alert
+====================
+1.Alert with Ok button
+2.Confirmation alert(ok,cancel)
+3.prompt alert
+
+Alert interface methods
+==========================
+1.accept()===>Ok
+2.dismiss()=====>cancel
+3.getText===> get the text of an alert
+5.sendKeys()=====>prompt/message
+
+How to handle basic authentication
+======================================
+Add credinatial in URL address
+
+https://username:password@url.com
+====================================================
 Frame Handling
+===================
+Html script embedded within html script then it is called Frame
+<frame> or <iframe>
+
+Type
+========
+1.simple frame
+2.Nested frame
+
+driver.switchTo().frame(arguments)
+
+Arguments
+=============
+1.index of frame
+2.id/name attribute value
+3.WebElement
+
+To come to the main document
+===========================
+defaultContent()
+===================================
+
 
 Mouse Operations
 

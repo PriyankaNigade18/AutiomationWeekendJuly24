@@ -23,11 +23,7 @@ Assignment 5:
 Automate amazon Footer 
 get all the footers inside console
 
-Assignment 6:
-=======================
-Write automation script for https://testautomationpractice.blogspot.com
-got to the static web table
-get all courses price and find total
+
 
 
 Assignment 6
@@ -45,5 +41,24 @@ Assignment 8:
 Automate goibibo application  dropdown
 
 
+Assignment 9:
+=======================
+Write automation script for https://testautomationpractice.blogspot.com
+got to the static web table
+get all courses price and find total
 
 
+Assignment 10:
+=====================
+Automate https://the-internet.herokuapp.com/javascript_alerts for 3 type sof alert
+do iterate every alert and then handle it
+
+Assignment 11:
+=====================
+Automate frames for https://ui.vision/demo/webtest/frames/
+application.
+
+Assignment 12:
+======================
+Automate frmaes from this application
+https://the-internet.herokuapp.com/nested_frames

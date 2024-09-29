@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-28T09:57:56 IST" name="Default suite" finished-at="2024-09-28T09:58:05 IST" duration-ms="8348">
+  <suite started-at="2024-09-29T09:54:08 IST" name="Default suite" finished-at="2024-09-29T09:54:13 IST" duration-ms="4562">
     <groups>
     </groups>
-    <test started-at="2024-09-28T09:57:56 IST" name="Default test" finished-at="2024-09-28T09:58:05 IST" duration-ms="8348">
-      <class name="com.WebElementHandling.StaticWebTableHandling">
-        <test-method signature="testTable()[pri:0, instance:com.WebElementHandling.StaticWebTableHandling@35aea049]" started-at="2024-09-28T09:57:56 IST" name="testTable" finished-at="2024-09-28T09:58:05 IST" duration-ms="8289" status="PASS">
+    <test started-at="2024-09-29T09:54:08 IST" name="Default test" finished-at="2024-09-29T09:54:13 IST" duration-ms="4562">
+      <class name="com.WebElementHandlingDay_2.FrameHandlingDemo2">
+        <test-method signature="testNestedFrame()[pri:0, instance:com.WebElementHandlingDay_2.FrameHandlingDemo2@35aea049]" started-at="2024-09-29T09:54:08 IST" name="testNestedFrame" finished-at="2024-09-29T09:54:13 IST" duration-ms="4509" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testTable -->
-      </class> <!-- com.WebElementHandling.StaticWebTableHandling -->
+        </test-method> <!-- testNestedFrame -->
+      </class> <!-- com.WebElementHandlingDay_2.FrameHandlingDemo2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
