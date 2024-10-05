@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-29T09:54:08 IST" name="Default suite" finished-at="2024-09-29T09:54:13 IST" duration-ms="4562">
+  <suite started-at="2024-10-05T10:10:47 IST" name="Default suite" finished-at="2024-10-05T10:10:54 IST" duration-ms="7030">
     <groups>
     </groups>
-    <test started-at="2024-09-29T09:54:08 IST" name="Default test" finished-at="2024-09-29T09:54:13 IST" duration-ms="4562">
-      <class name="com.WebElementHandlingDay_2.FrameHandlingDemo2">
-        <test-method signature="testNestedFrame()[pri:0, instance:com.WebElementHandlingDay_2.FrameHandlingDemo2@35aea049]" started-at="2024-09-29T09:54:08 IST" name="testNestedFrame" finished-at="2024-09-29T09:54:13 IST" duration-ms="4509" status="PASS">
+    <test started-at="2024-10-05T10:10:47 IST" name="Default test" finished-at="2024-10-05T10:10:54 IST" duration-ms="7030">
+      <class name="com.MouseOperations.DoubleClickAction">
+        <test-method signature="testDoubleClick()[pri:0, instance:com.MouseOperations.DoubleClickAction@7205765b]" started-at="2024-10-05T10:10:47 IST" name="testDoubleClick" finished-at="2024-10-05T10:10:54 IST" duration-ms="6972" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNestedFrame -->
-      </class> <!-- com.WebElementHandlingDay_2.FrameHandlingDemo2 -->
+        </test-method> <!-- testDoubleClick -->
+      </class> <!-- com.MouseOperations.DoubleClickAction -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

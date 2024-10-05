@@ -211,7 +211,8 @@ It will continue with next element
 
 
 2.Explicit wait
-
+=======
+check on 5-10-2024
 
 ===============================================================
 
@@ -658,20 +659,81 @@ To come to the main document
 ===========================
 defaultContent()
 ===================================
+5-10-2024
+====================
+Wait in selenium
+======================
+What is Synchronization in Selenium
+===========================================
+tool and application must execute with time mapping.
+
+If  there is time mapping issue in between tool and application then it is called
+Synchronization issue in selenium
+
+Selenium Support two dynamic wait
+=================================
+1.Implicit Wait
+=========================
+- Is globally applicable for entire webelements on the page
+
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+Example
+===========
+Suppose element need 8sec to load
+Implicit timeout =10sec
+
+Once within 10sec of element found selenium will not wait remaining 2sec.
+It will continue with next element
 
 
+What is default timeout when you dont set any implicit/pageload/scriptime out
+====================================================================
+timeouts: {implicit: 0, pageLoad: 300000, script: 30000}
+implicit: 0
+pageLoad: 300000ms-->300sec---->5mins
+script: 30000ms--->30sec
+
+2.Explicit wait
+==========================
+- It is applicable to single webelement
+- based on condition we can apply this wait for webelement
+- selenium support two classes to implement Explicitwait
+1.WebDriverWait class
+2.FluentWaitClass
+
+WebDriverWait(c)extends FluentWait(c)implements Wait(I)
+==============================================================
+
+JavascriptExecutor
+==========================
+JavascriptExecutor is interface which pass instructions direct to browser
+-Scroll functionality
+-to refresh browser
+-to get the title
+-to click element/sendkeys(basic actions)
+=====================================================================
 Mouse Operations
+======================
+For mouse operation selenium support Actions class
+
+contextClick(): right click
+doubleClick():doubleClick
 
 ======================
 File Upload/Download
-Robot class(keyboard)
+
+File upload
+=======================
+1.sendKeys()
+2.Robot class(keyboard)
 =======================
 
 Capabilties
 ===================
 Headless testing
 ignore notification
-to get timeout(pageloadtime,implicit,explicit)
+to get default timeout(pageloadtime,implicit,explicit)
 
 Framework:
 =============

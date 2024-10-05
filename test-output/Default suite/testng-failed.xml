@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.WebElementHandlingDay_2.FrameHandlingDemo1">
+      <class name="com.JavaScriptExecutor.ScrollIntoViewScenario">
         <methods>
-          <include name="testFrame"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- com.WebElementHandlingDay_2.FrameHandlingDemo1 -->
+      </class> <!-- com.JavaScriptExecutor.ScrollIntoViewScenario -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
