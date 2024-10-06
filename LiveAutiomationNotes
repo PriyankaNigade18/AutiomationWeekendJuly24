@@ -713,34 +713,132 @@ JavascriptExecutor is interface which pass instructions direct to browser
 -to get the title
 -to click element/sendkeys(basic actions)
 =====================================================================
+6-10-2024
+================
 Mouse Operations
 ======================
 For mouse operation selenium support Actions class
-
 contextClick(): right click
 doubleClick():doubleClick
-
+moveToElement(): mouse over
+dargAndDrop(): drag and drop
 ======================
 File Upload/Download
 
 File upload
 =======================
 1.sendKeys()
+====================
+<input id="file-upload" type="file" name="file" wfd-id="id0">
+when type=file then only sendkeys applicable
+
 2.Robot class(keyboard)
 =======================
 
 Capabilties
 ===================
+https://developer.chrome.com/docs/chromedriver/capabilities
+
+Capabilities are options that you can use to customize and configure a ChromeDriver session. 
+
 Headless testing
+==================
+selenium 3.14version
+HTMLUnitDriver
+
+Selenium 4 using ChromeOptions we can add argument
+
 ignore notification
 to get default timeout(pageloadtime,implicit,explicit)
+
+========================================================
 
 Framework:
 =============
 1.TestNG
+=======================
+Unit testing framework
+
+TestNG framework is based on xml file=configuration file for framewrok
+=======================================
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Default suite" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test" verbose="2">
+    <classes>
+      <class name="com.TestNGFramework.TestDemo1"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
+            
+=======================================================
+TestNG Arguments
+======================
+1.Sequencing the test- priority
+---------------------------
+By default testng test case executed in alphabetical order
+To run as per our expected order use priority argument
+
+2.description
+-------------------
+To set the description for test use this
+
+3.invocationCount
+--------------------------
+To run test case multiple number time(iteration)
 
 
-2.Cucumber
+
+
+How to ignore any test from execution
+==============================================
+1. Using argument
+========================
+4.enabled=false
+---------------------------
+To disable test case from current execution we can use this argument
+
+2.Using testng.xml file
+===========================
+to create xml file right click on file and use option testng--->convert to testng and create file
+<classes>
+      <class name="com.TestNGFramework.TestDemo3_IgnoringScenario">
+      <methods>
+      <exclude name="projectAssignProcess"></exclude>
+      </methods>
+      </class>
+    </classes>
+    
+    Whenever xml file you are using then run test case from xml not from class
+    
+
+5.dependsOnMethods
+=========================
+
+Assertion in TestNg
+=======================
+
+Test Suite creation
+=======================
+
+Annotations
+==================
+
+
+How to read data
+================
+1.Using xml file
+
+2.Using properties File
+
+DataDriven Test
+======================
+
+Screenshot
+==================
+
+Parallel execution
+=========================
 
 
 How to design own framework(Hybrid framework design)
@@ -751,6 +849,12 @@ Reporting
 1.Listners
 2.ExtentReport
 3.Allur Report
+========================================
+2.Cucumber
+
+
+
+
 
 
 
