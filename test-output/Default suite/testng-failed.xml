@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Capabilities.FileUploadUsingRobotClass">
+      <class name="com.TestNGFramework.TestDemo5_timeoutArgument">
         <methods>
-          <include name="testUpload"/>
+          <include name="testCase2"/>
         </methods>
-      </class> <!-- com.Capabilities.FileUploadUsingRobotClass -->
+      </class> <!-- com.TestNGFramework.TestDemo5_timeoutArgument -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

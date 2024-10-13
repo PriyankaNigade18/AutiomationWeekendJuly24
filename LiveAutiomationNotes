@@ -809,21 +809,63 @@ to create xml file right click on file and use option testng--->convert to testn
       </class>
     </classes>
     
-    Whenever xml file you are using then run test case from xml not from class
-    
-
-5.dependsOnMethods
-=========================
-
+Whenever xml file you are using then run test case from xml not from class
+13-10-2024
+===================    
 Assertion in TestNg
 =======================
+Assertion help to test current state of the application
+Hard Assertion
+===================
+If assertion fail it throws AssertionError and stop execution on that line
+It contains all static method
+Assert is class
+
+Soft Assertion
+==================
+If assertion fail it throws error and test continue till the end
+It does not contains any static method
+SoftAssert is class
+
+
+5.dependsOnMethods argument
+=========================
+For dependency between test we can use it
+
+6.timeOut Argument
+=============================
+To assert execution timeout we use this argument
 
 Test Suite creation
 =======================
+Collection of test cases is suite
+Using xml file
 
 Annotations
 ==================
+Rule for test execution
+----------------------------
+prerequisite
+===============
+@Before
 
+postCondition
+==============
+@After
+
+
+Groups in TestNG
+=========================
+
+As per the type of test case we can group them and we can run using xml
+
+page object model
+==========================
+Page object is design pattern 
+
+1.Using By locator---done
+
+2.Using PageFactory class
 
 How to read data
 ================

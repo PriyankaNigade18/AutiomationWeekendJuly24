@@ -2,6 +2,7 @@ package com.TestNGFramework;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 public class TestDemo3_IgnoringScenario {
   @Test(priority=1)
