@@ -859,22 +859,42 @@ Groups in TestNG
 
 As per the type of test case we can group them and we can run using xml
 
+=================================================
+19-10-2024
+===================
 page object model
 ==========================
-Page object is design pattern 
+Page object is design pattern used to maintain the code and
+avoid code duplication
 
 1.Using By locator---done
 
 2.Using PageFactory class
+-----------------------
 
+To identifi locators
+----------------
+@FindBy(id="")WebElement ele;
+
+PageFactory.initElements(driver,current class object);
+===============================================================
 How to read data
 ================
 1.Using xml file
+--------------------
+<parameter name="" value=""/>
+
+@Parameters
 
 2.Using properties File
+===============================
+done
 
 DataDriven Test
 ======================
+Execute same set of action with multiple data multiple time is called data driven test
+1.Using Array
+2.Using Excel file=--->Apache POI library
 
 Screenshot
 ==================

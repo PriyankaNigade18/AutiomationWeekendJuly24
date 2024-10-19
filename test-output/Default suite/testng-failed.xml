@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGFramework.TestDemo5_timeoutArgument">
+      <class name="com.TestNGFramework.DataDrivenTest.HrmDataDriven">
         <methods>
-          <include name="testCase2"/>
+          <include name="testLogin" invocation-numbers="1 2"/>
         </methods>
-      </class> <!-- com.TestNGFramework.TestDemo5_timeoutArgument -->
+      </class> <!-- com.TestNGFramework.DataDrivenTest.HrmDataDriven -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
