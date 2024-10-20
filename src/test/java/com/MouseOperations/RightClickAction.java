@@ -10,6 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import com.Generic.Utility;
+
 public class RightClickAction {
   @Test
   public void testRightClickAction()
@@ -22,6 +24,7 @@ public class RightClickAction {
 	  //create object of Actions class
 	  Actions act=new Actions(driver);
 	  act.contextClick(ele).perform();
+	  Utility.getScreenshot(driver,"RightClickAction");
 	  
 	  //get the menu and click on delete
 	  List<WebElement> menu1=driver.findElements(By.xpath("(//ul)[3]//li//span"));

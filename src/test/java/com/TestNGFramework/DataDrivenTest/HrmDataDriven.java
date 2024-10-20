@@ -10,7 +10,9 @@ import org.testng.annotations.Test;
 
 public class HrmDataDriven
 {
-  @Test(dataProvider = "mydata",dataProviderClass = CustomData.class)
+ // @Test(dataProvider = "mydata",dataProviderClass = CustomData.class)
+	
+  @Test(dataProvider = "ExcelData",dataProviderClass = CustomData.class)
   public void testLogin(String un,String psw)
   {
 	  WebDriver driver=new ChromeDriver();

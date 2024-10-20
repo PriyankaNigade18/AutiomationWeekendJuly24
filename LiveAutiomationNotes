@@ -896,15 +896,50 @@ Execute same set of action with multiple data multiple time is called data drive
 1.Using Array
 2.Using Excel file=--->Apache POI library
 
+=====================================
+20-10-2024
+================
 Screenshot
 ==================
+TakesScreenshot interface
 
-Parallel execution
-=========================
+Parallel execution/cross browser testing
+=======================================
 
 
 How to design own framework(Hybrid framework design)
 ========================================================
+Step1: Design the framework
+================================
+1.PageObject
+2.TestCase
+3.BaseClass
+4.Config data
+5.Test Data
+
+Step 2: Execution
+=================
+1.Using xml file
+2.Using Maven pom.xml 
+3.Using CLI
+4.Using Jenkins
+
+Step3:Reporting
+==================
+Listener+ExtentReport
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Reporting
 ===================

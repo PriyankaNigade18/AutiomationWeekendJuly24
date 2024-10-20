@@ -5,7 +5,7 @@
     <classes>
       <class name="com.TestNGFramework.DataDrivenTest.HrmDataDriven">
         <methods>
-          <include name="testLogin" invocation-numbers="1 2"/>
+          <include name="testLogin" invocation-numbers="1 3"/>
         </methods>
       </class> <!-- com.TestNGFramework.DataDrivenTest.HrmDataDriven -->
     </classes>
