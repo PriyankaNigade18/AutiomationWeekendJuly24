@@ -1,0 +1,1106 @@
+
+Selenium WebDriver
+=============================
+Selenium WebDriver is an interface
+Selenium WebDriver is an API for webUI automation test
+================================================================
+Setup in Java Project
+======================
+1.create new java project
+2.Download selenium jar form selenium.dev
+3.right click on project--->build path--->configure build path-->
+libraries-->click on class path--->add external jar
+----->add selenium jar and apply and save
+
+------------------------------------------
+Setup in Maven Project
+================================
+1. create a maven project
+2. download dependecy
+3. add it to pom.xml 
+
+Maven is build management tool as well as Project management tool
+
+In Maven POM.xml file
+==============================
+POM is project object model 
+This is configuration file
+Entire project setup we can do inside POM.xml
+
+1.dependency(library-executable file)
+2.plugins(compiler/surefile plugins)
+
+Maven support two types of Repository
+=========================================
+1.Local repo
+===================
+Users/m2 folder
+
+2.Remote/central Repo
+=====================
+https://mvnrepository.com/
+
+=================================================================
+Test Case: Validate Google application title 
+Step1: Open Google application
+Step2: Get the current title of application
+Step3: Validate expected vs actual
+Step4: Display appropriate result
+Step5: close the browser
+
+====================================
+WebDriver Commands
+====================
+1.Browser commands
+2.Navigation commands
+3.WebElement commands
+
+
+1.Browser commands
+========================
+1.get(url)
+2.getTitle()
+3.getCurrentUrl()
+4.getPageSource()
+5.getWindowHandle()
+6.getWindowHandles()
+7.close()
+8.quit()
+
+Exceptions In Selenium
+================
+1.InvalidArgumentException: invalid argument
+for wrong url address
+
+2.NoSuchElementException
+if element not found
+===================================================
+Navigation commands
+=================================
+Selenium support Navigation interface
+navigate() is methods which return Navigation interface object
+
+1.to(url)
+=================
+driver.navigate().to(url)
+
+2.back()
+======================
+driver.navigate().back()
+
+3.forward()
+=======================
+driver.navigete().forward()
+
+4.refresh()
+=============================
+driver.navigate().refresh()
+
+What is WebElement in Selenium
+==========================================
+In general every UI element is WebElement
+like textbox,button,link,searchbox,checkbox,radiobutton....etc
+
+In technical word In selenium To interact with UI element we
+have WebElement as interface
+
+To interact with webelement
+===============================
+1.Identify webelement
+2.perform action on webelement
+
+
+How selenium identify webelement
+======================================
+Selenium identify webelement using locators
+
+What is locator?
+====================
+Locator is address of webelement from webpage
+Selenium support total 8 locators
+
+1.By id
+2.By name
+3.By className
+4.By linkText
+5.By parialLinkText
+6.By tagName
+
+Dynamic Locators
+====================
+7.By cssSelector
+8.By xpath
+
+What is By?
+================
+By is class in selenium
+By returns By class Object itself
+
+Using locator you will get address that address you need to pass to the method
+Identification method are:
+=================================
+1.findElement()
+=========================
+driver.findElement(By loc)
+- findElement() idenitify one single webelement
+- findElement() returns Webelement interface object
+- If any webelement not found this method throws exception
+NoSuchElementException.
+
+2.findElements()
+==================
+driver.findElements(By loc)
+- findElements() method identify multiple webElements
+- findElements() returns List<WebElement>
+- if element not found it never throws exception 
+
+=============================================================
+
+WebElement actions
+==========================================
+textbox,searchbox---->type data---->sendKeys("data",Keys.ENTER)
+Keys is class in selenium
+To clear the text ------------------>clear()
+button,checkbox,link--->click------>click()
+
+=========================
+WebElement commands for validation
+===================================
+1.isDisplayed()
+2.isEnabled()
+3.isSelected() -checkbox,radio button
+
+===================================
+How to automate any hyperlink
+=================================
+<a id="SignIn" href="login.html">Sign In</a>
+<a> link text </a>
+
+1.linkText()=full text
+===================
+driver.findElement(By.linkText("Sign In"))
+
+2.partialLinkText()= partial text
+=====================================
+driver.findElement(By.partialLinkText("In"))
+
+What is Synchronization in Selenium
+===========================================
+tool and application must execute with time mapping.
+
+If  there is time mapping issue in between tool and application then it is called
+Synchronization issue in selenium
+
+Selenium Support two dynamic wait
+=================================
+1.Implicit Wait
+=========================
+- Is globally applicable for entire webelements on the page
+
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+Example
+===========
+Suppose element need 8sec to load
+Implicit timeout =10sec
+
+Once within 10sec of element found selenium will not wait remaining 2sec.
+It will continue with next element
+
+
+
+
+2.Explicit wait
+=======
+check on 5-10-2024
+
+===============================================================
+
+By ClassName locator
+==========================
+
+class="oxd-button oxd-button--medium oxd-button--main orangehrm-login-button"
+
+InvalidSelectorException: Compound class names not permitted
+==============================================================
+21-09-2024
+==================
+By tagName
+=================
+tagName locator locates multiple similar elements
+
+Number of input boxes
+Number of images
+Number of Links
+
+WebElement Methods
+======================
+1.getText()
+===============
+It returns visible text of the element
+to get the html inner text we use this method
+
+2.getAttribute(attributename)
+=================================
+getAttribute() return attribute value
+
+Dynamic Locators
+========================
+1.By cssSelector
+=========================
+Css is cascaded style sheet is a language for providing styles to the webElement
+
+cssSelector is locator to identify webelement based on its attribute
+cssSelector is faster than xpath(as it travels only in one direction)
+parent tag--->child tag
+cssSelector have no method support
+cssSelector does not allowed indexing/Axies
+cssSelector supports special characters for(partial match (*),starts with (^),endswith($))
+
+1.tagname with id
+=======================
+syntax
+==========
+tagname#id
+
+<input id="input-email" class="form-control">
+
+input#input-email
+
+2.tagname with attribute
+==============================
+Syntax
+============
+tagname[attribute='value']
+
+<input  placeholder="Password" id="input-password" class="form-control">
+
+input[placeholder='Password']
+
+3.tagname with class name
+================================
+Syntax
+===========
+tagname.classname
+
+<input type="submit" value="Login" class="btn btn-primary">
+
+input.btn.btn-primary
+
+
+
+4.tagname with id,classname,attribute
+==============================================
+Syntax
+===============
+tagname#id.classname[attribute='value']
+
+email id
+===============
+<input type="text" name="email" value="" placeholder="E-Mail Address" id="input-email" class="form-control">
+input#input-email.form-control[placeholder='E-Mail Address']
+
+<input type="submit" value="Login" class="btn btn-primary">
+input.btn[value='Login']
+
+copied by DOM
+==================
+#input-email
+
+cssSelector with special characters
+=======================================
+<input type="text" name="email" value="" placeholder="E-Mail Address" id="input-email" class="form-control">
+1.partial match contains(*)
+==========================
+Syntax
+===========
+tagname[attribute*='partial value to match']
+input[id*='email']
+
+2.startsWith(^)-prefix value
+=======================
+<input  placeholder="Password" id="input-password" class="form-control">
+
+Syntax
+=========
+tagname[attribute ^='prefix value']
+
+input[placeholder ^='Pas']
+
+3.endsWith($)-suffix value
+=================
+<input type="submit" value="Login" class="btn btn-primary">
+
+syntax
+==============
+tagname[attribute $='suffix value']
+
+input[class $='primary']
+==================================================
+
+2.By xpath
+=================
+what is Xpath
+================
+Xpath is path of the webelement form html/xml page
+Xpath identify weblement directly from DOM
+Xpath can travel in both direction(forward and backward)
+Xpath supports multiple methods
+Xpath supports xpath axies/indexing
+
+
+
+What is DOM
+=================
+DOM is an API from WebBrowsers
+WebBrowsers open the webpage and load Document Object Model
+================HTML DOM=======================
+<html>---------------------root element/node
+<head>
+</head>
+
+<body>
+<input>
+<a>--------------------webelement
+<div>
+
+</body>
+</html>
+
+=====================================================
+Types of Xpath
+=================
+1.Absolute xpath
+===================
+- Absolute xpath identify weblement from the root element
+- Absolute xpath starts with '/'
+
+
+/html/body/div[2]/div/div/div/div[2]/div/form/div[1]/input
+
+2.Relative xpath
+===================
+- Relative xpath identify weblement from the attribute
+- Relative xpath starts with '//'
+
+//*[@id="input-email"]
+
+here * any tagname
+
+=============================================
+xpath Syntax:
+============
+//tagname[@attribute='value']
+
+Xpath with Operators
+-======================
+1.and
+===========
+syntax:
+=======
+//tagname[@attribute='value' and @attribute='value']
+
+//input[@name='lastname' and @class='form-control']
+
+2.or
+==============
+syntax:
+=======
+//tagname[@attribute='value' or @attribute='value']
+
+//input[@name='email' or @class='abcd']
+
+=========================================================
+Xpath with indexing/position()
+====================================
+//input[@class='form-control']----------------- 1 of 6
+
+Syntax:
+============
+(xpath)[index]
+
+(//input[@class='form-control'])[4]
+
+position()
+==============
+syntax:
+============
+(xpath)[position()=index]
+
+(//input[@class='form-control'])[position()=6]
+
+===============================================
+Xpath Methods
+==================
+1.text()
+========
+based on visible text we can identify element
+
+syntax:
+---------
+//tagname[text()='text']
+
+2.normalize-space()
+======================
+this method ignore white space like trim() and get/match the visible text
+Syntax:
+==========
+//tagname[normalize-space()='text']
+
+
+3.contains()-partail match
+===============================
+Syntax:
+=============
+//tagname[contains(@attribute,'partial value')]
+
+or
+//tagname[contains(text(),'partail text']
+
+
+4.starts-with()-prefix value
+==================================
+
+Syntax:
+=========
+//tagname[starts-with(@attribute,'prefix value')]
+
+=======================================================
+
+Xpath Axies
+================
+1.ancestor
+===============
+Syntax:
+==========
+//tagname[@attribute='value']//ancestor::ancestor tagname
+
+Identify Ancestor for John
+==========================
+//td[text()='John']//ancestor::tbody......1 of 1
+
+2.parent
+=============
+Syntax:
+==========
+//tagname[@attribute='value']//parent::parent tagname
+
+3.child
+============
+Syntax:
+==========
+//tagname[@attribute='value']//child::child tagname
+
+4.following
+=================
+Syntax:
+==========
+//tagname[@attribute='value']//following::following ele tagname
+
+5.following-sibling
+======================
+Syntax:
+==========
+//tagname[@attribute='value']//following-sibling::following sibling  tagname
+
+6.preceding
+==============
+Syntax:
+==========
+//tagname[@attribute='value']//preceding::preceding ele tagname
+
+7.preceding-sibling
+========================
+Syntax:
+==========
+//tagname[@attribute='value']//preceding-sibling::preceding-sibling ele tagname
+
+========================================================================
+
+<tbody>------------------------grand parent ancestor
+<tr>------------------parent
+ 
+         <td>4</td>
+
+          <td>John</td>----element child of tr
+
+          <td>Robinson</td>
+
+          <td>jr5527</td>
+ 
+         <td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a role="button" href="#myModal" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+
+        </tr>
+
+</tbody>
+
+==============================================================
+Relative Locators (Selenium 4 feature)
+=========================================
+below()
+above()
+near()
+toLeftOf()
+toRightOf()
+================================================
+WebElement Automation
+=======================
+dropdown automation
+==========================
+1.Select tag based dropdown
+=============================
+for <select> tag based dropdown
+
+Use Select class
+Select sc=new Select(dropdown ele address);
+
+Is dropdown support multiple selection?
+isMultiple()
+
+To perform single selection
+===========================
+1.selectByIndex()
+2.selctByVisibleText()
+3.selectByValue()
+
+
+To get All the options
+============================
+getOptions()
+
+2.BootStrap/JavaScript/dynamic Dropdown
+=================================
+xpath
+
+=================================================
+Calendar
+===============
+expected date
+select expected month
+select expected date
+
+WebTable(static/dynamic)
+==============================
+Basic scenarios
+====================
+1.get all headings
+2.Number of rows
+3.Number of columns
+4.Specific Row data
+5.Specific Column data
+6.get all the data
+============================================
+29-09-2024
+===================
+Window handling
+=======================
+Multiple Window Handling
+-----------------------
+1.getWindowHandle(): String= Parent window session Id
+2.getWindowHandles(): Set<String>= Parent and child session Id
+
+SwitchTo().target
+
+How to open New tab/New Window
+--------------------------------
+Selenium 4 new feature- newWindow()
+newWindow() return WebDriver interface object
+
+WebDriver ref=driver.switchTo().newWindow(WindowType.TAB);
+WebDriver ref=driver.switchTo().newWindow(WindowType.WINDOW);
+
+=========================================================
+
+Alert handling/pop up message
+====================================
+Alert interface is available in Selenium
+
+Types of alert
+====================
+1.Alert with Ok button
+2.Confirmation alert(ok,cancel)
+3.prompt alert
+
+Alert interface methods
+==========================
+1.accept()===>Ok
+2.dismiss()=====>cancel
+3.getText===> get the text of an alert
+5.sendKeys()=====>prompt/message
+
+How to handle basic authentication
+======================================
+Add credinatial in URL address
+
+https://username:password@url.com
+====================================================
+Frame Handling
+===================
+Html script embedded within html script then it is called Frame
+<frame> or <iframe>
+
+Type
+========
+1.simple frame
+2.Nested frame
+
+driver.switchTo().frame(arguments)
+
+Arguments
+=============
+1.index of frame
+2.id/name attribute value
+3.WebElement
+
+To come to the main document
+===========================
+defaultContent()
+===================================
+5-10-2024
+====================
+Wait in selenium
+======================
+What is Synchronization in Selenium
+===========================================
+tool and application must execute with time mapping.
+
+If  there is time mapping issue in between tool and application then it is called
+Synchronization issue in selenium
+
+Selenium Support two dynamic wait
+=================================
+1.Implicit Wait
+=========================
+- Is globally applicable for entire webelements on the page
+
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+Example
+===========
+Suppose element need 8sec to load
+Implicit timeout =10sec
+
+Once within 10sec of element found selenium will not wait remaining 2sec.
+It will continue with next element
+
+
+What is default timeout when you dont set any implicit/pageload/scriptime out
+====================================================================
+timeouts: {implicit: 0, pageLoad: 300000, script: 30000}
+implicit: 0
+pageLoad: 300000ms-->300sec---->5mins
+script: 30000ms--->30sec
+
+2.Explicit wait
+==========================
+- It is applicable to single webelement
+- based on condition we can apply this wait for webelement
+- selenium support two classes to implement Explicitwait
+1.WebDriverWait class
+2.FluentWaitClass
+
+WebDriverWait(c)extends FluentWait(c)implements Wait(I)
+==============================================================
+
+JavascriptExecutor
+==========================
+JavascriptExecutor is interface which pass instructions direct to browser
+-Scroll functionality
+-to refresh browser
+-to get the title
+-to click element/sendkeys(basic actions)
+=====================================================================
+6-10-2024
+================
+Mouse Operations
+======================
+For mouse operation selenium support Actions class
+contextClick(): right click
+doubleClick():doubleClick
+moveToElement(): mouse over
+dargAndDrop(): drag and drop
+======================
+File Upload/Download
+
+File upload
+=======================
+1.sendKeys()
+====================
+<input id="file-upload" type="file" name="file" wfd-id="id0">
+when type=file then only sendkeys applicable
+
+2.Robot class(keyboard)
+=======================
+
+Capabilties
+===================
+https://developer.chrome.com/docs/chromedriver/capabilities
+
+Capabilities are options that you can use to customize and configure a ChromeDriver session. 
+
+Headless testing
+==================
+selenium 3.14version
+HTMLUnitDriver
+
+Selenium 4 using ChromeOptions we can add argument
+
+ignore notification
+to get default timeout(pageloadtime,implicit,explicit)
+
+========================================================
+
+Framework:
+=============
+1.TestNG
+=======================
+Unit testing framework
+
+TestNG framework is based on xml file=configuration file for framewrok
+=======================================
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Default suite" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test" verbose="2">
+    <classes>
+      <class name="com.TestNGFramework.TestDemo1"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
+            
+=======================================================
+TestNG Arguments
+======================
+1.Sequencing the test- priority
+---------------------------
+By default testng test case executed in alphabetical order
+To run as per our expected order use priority argument
+
+2.description
+-------------------
+To set the description for test use this
+
+3.invocationCount
+--------------------------
+To run test case multiple number time(iteration)
+
+
+
+
+How to ignore any test from execution
+==============================================
+1. Using argument
+========================
+4.enabled=false
+---------------------------
+To disable test case from current execution we can use this argument
+
+2.Using testng.xml file
+===========================
+to create xml file right click on file and use option testng--->convert to testng and create file
+<classes>
+      <class name="com.TestNGFramework.TestDemo3_IgnoringScenario">
+      <methods>
+      <exclude name="projectAssignProcess"></exclude>
+      </methods>
+      </class>
+    </classes>
+    
+Whenever xml file you are using then run test case from xml not from class
+13-10-2024
+===================    
+Assertion in TestNg
+=======================
+Assertion help to test current state of the application
+Hard Assertion
+===================
+If assertion fail it throws AssertionError and stop execution on that line
+It contains all static method
+Assert is class
+
+Soft Assertion
+==================
+If assertion fail it throws error and test continue till the end
+It does not contains any static method
+SoftAssert is class
+
+
+5.dependsOnMethods argument
+=========================
+For dependency between test we can use it
+
+6.timeOut Argument
+=============================
+To assert execution timeout we use this argument
+
+Test Suite creation
+=======================
+Collection of test cases is suite
+Using xml file
+
+Annotations
+==================
+Rule for test execution
+----------------------------
+prerequisite
+===============
+@Before
+
+postCondition
+==============
+@After
+
+
+Groups in TestNG
+=========================
+
+As per the type of test case we can group them and we can run using xml
+
+=================================================
+19-10-2024
+===================
+page object model
+==========================
+Page object is design pattern used to maintain the code and
+avoid code duplication
+
+1.Using By locator---done
+
+2.Using PageFactory class
+-----------------------
+
+To identifi locators
+----------------
+@FindBy(id="")WebElement ele;
+
+PageFactory.initElements(driver,current class object);
+===============================================================
+How to read data
+================
+1.Using xml file
+--------------------
+<parameter name="" value=""/>
+
+@Parameters
+
+2.Using properties File
+===============================
+done
+
+DataDriven Test
+======================
+Execute same set of action with multiple data multiple time is called data driven test
+1.Using Array
+2.Using Excel file=--->Apache POI library
+
+=====================================
+20-10-2024
+================
+Screenshot
+==================
+TakesScreenshot interface
+
+Parallel execution/cross browser testing
+=======================================
+
+
+How to design own framework(Hybrid framework design)
+========================================================
+Step1: Design the framework
+================================
+1.PageObject
+2.TestCase
+3.BaseClass
+4.Config data
+5.Test Data
+
+Step 2: Execution
+=================
+1.Using xml file
+2.Using Maven pom.xml 
+3.Using CLI
+4.Using Jenkins
+
+Step3:Reporting
+==================
+Listener+ExtentReport
+
+Maven Execution
+==================
+plugins
+==============
+1.compiler plugin
+https://maven.apache.org/plugins/maven-compiler-plugin/examples/compile-using-different-jdk.html
+2.surefire 
+https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html
+
+Goals
+==========
+1.clean: delete the documents/reports from target folder
+2.test: test the entire project
+3.install:necessary artifacts required get downloaded first and then it run the project
+
+3.Using CLI
+====================
+download maven on local machine
+https://maven.apache.org/download.cgi
+
+
+4.Using jenkins
+=======================
+Devops
+
+selenium Grid
+==================
+
+Reporting
+===================
+1.Listners
+2.ExtentReport
+3.Allur Report
+========================================
+2.Cucumber
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
