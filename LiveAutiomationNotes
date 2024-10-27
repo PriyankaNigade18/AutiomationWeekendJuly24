@@ -928,24 +928,49 @@ Step3:Reporting
 ==================
 Listener+ExtentReport
 
+Maven Execution
+==================
+plugins
+==============
+1.compiler plugin
+https://maven.apache.org/plugins/maven-compiler-plugin/examples/compile-using-different-jdk.html
+2.surefire 
+https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html
+
+Goals
+==========
+1.clean: delete the documents/reports from target folder
+2.test: test the entire project
+3.install:necessary artifacts required get downloaded first and then it run the project
+
+3.Using CLI
+====================
+download maven on local machine
+https://maven.apache.org/download.cgi
 
 
-
-
-
-
-
-
-
-
-
+4.Using jenkins
+=======================
+Devops
 
 
 Reporting
 ===================
 1.Listners
+----------------
+listeners listen event and generate result
+
+How to apply
+=============
+1.@Listners
+2.Using xml 
+
 2.ExtentReport
 3.Allur Report
+
+selenium Grid
+==================
+
 ========================================
 2.Cucumber
 

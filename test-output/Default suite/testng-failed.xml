@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestNGFramework.DataDrivenTest.HrmDataDriven">
+      <class name="com.Listeners.TestCases">
         <methods>
-          <include name="testLogin" invocation-numbers="1 3"/>
+          <include name="testCase2"/>
         </methods>
-      </class> <!-- com.TestNGFramework.DataDrivenTest.HrmDataDriven -->
+      </class> <!-- com.Listeners.TestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
