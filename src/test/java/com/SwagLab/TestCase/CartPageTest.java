@@ -11,9 +11,12 @@ public class CartPageTest extends BaseTest
 	@BeforeClass
 	public void pageSetup()
 	{
-		ip=lp.doLogin("standard_user","secret_sauce");
-		ip.addProducttoCart("Sauce Labs Bolt T-Shirt");
+		ip=lp.doLogin(prop.getData("un"),prop.getData("psw"));
+		addWait();
+		ip.addProducttoCart(prop.getData("pname1"));
+		addWait();
 		cp=ip.openCartPage();
+		addWait();
 	}
   @Test(priority=1)
   public void validateAddedProduct() 
@@ -25,13 +28,15 @@ public class CartPageTest extends BaseTest
   public void validateProductRemove() 
   {
 	  cp.removeProduct();
+	  addWait();
   }
   
   @Test(priority=3)
   public void validateContinueShopping()
   {
 	  ip=cp.doContinueShopping();
-	  ip.addProducttoCart("Sauce Labs Fleece Jacket");
+	  addWait();
+	  ip.addProducttoCart(prop.getData("pname2"));
 	  ip.openCartPage();
   }
   

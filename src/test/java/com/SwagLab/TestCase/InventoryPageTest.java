@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.SwagLab.Base.BaseTest;
+import com.SwagLab.Utility.Utility;
 
 public class InventoryPageTest extends BaseTest
 {
@@ -12,7 +13,7 @@ public class InventoryPageTest extends BaseTest
 	@BeforeClass
 	public void pageSetUp()
 	{
-		ip=lp.doLogin("standard_user","secret_sauce");
+		ip=lp.doLogin(prop.getData("un"),prop.getData("psw"));
 	}
 	
   @Test(priority=1)
@@ -27,12 +28,13 @@ public class InventoryPageTest extends BaseTest
   public void validateProductDetails()
   {
 	  ip.getProductDetails();
+	  
   }
   
   @Test(priority=3)
   public void validateAddToCart()
   {
-	  ip.addProducttoCart("Sauce Labs Backpack");
+	  ip.addProducttoCart(prop.getData("pname1"));
 	  
   }
   

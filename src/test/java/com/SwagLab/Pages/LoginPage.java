@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.SwagLab.Utility.Utility;
+
 public class LoginPage
 {
 
@@ -41,6 +43,7 @@ public class LoginPage
 	{
 		username.sendKeys(un);
 		password.sendKeys(psw);
+		Utility.getScreenshot(driver,"LoginData");
 		loginBtn.click();
 		//changing current state of app-Inventory page
 		return new InventoryPage(driver);

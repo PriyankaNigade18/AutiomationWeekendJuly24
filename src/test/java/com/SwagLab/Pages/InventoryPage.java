@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.SwagLab.Utility.Utility;
+
 public class InventoryPage 
 {
 
@@ -40,6 +42,7 @@ public class InventoryPage
 	
 	public void getProductDetails()
 	{
+		Utility.getScreenshot(driver,"InventoryPage");
 		System.out.println("**********Product Details************");
 		for(WebElement i:allProduct)
 		{
@@ -58,8 +61,11 @@ public class InventoryPage
 			}
 		}
 		
+		Utility.getScreenshot(driver,"Product");
 		//click on add to cart
 		addToCartBtn.click();
+		
+		
 		
 	System.out.println("Product added to cart: "+pname);
 		
@@ -69,6 +75,7 @@ public class InventoryPage
 	public CartPage openCartPage()
 	{
 		cartBtn.click();
+		Utility.getScreenshot(driver,"CartPage");
 		return new CartPage(driver);
 	}
 	

@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.SwagLab.Utility.Utility;
+
 public class CartPage 
 {
 	 private WebDriver driver;
@@ -39,19 +41,22 @@ public class CartPage
 	 {
 		 String name=pname.getText();
 		 removeBtn.click();
+		 Utility.getScreenshot(driver,"AfterProductRemove");
 		 System.out.println("Product Removed from cart: "+name);
 	 }
 	 
 	 public InventoryPage doContinueShopping()
 	 {
 		 contBtn.click();
+		 Utility.getScreenshot(driver,"AfterContinue");
 		 return new InventoryPage(driver);
 	 }
 	 
 	 public CheckoutPage openCheckOutPage()
 	 {
 		 checkBtn.click();
-		 return new CheckoutPage();
+		 Utility.getScreenshot(driver,"checkoutPage");
+		 return new CheckoutPage(driver);
 	 }
 	 
 	 
