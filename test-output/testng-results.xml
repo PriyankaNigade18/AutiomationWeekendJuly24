@@ -2,16 +2,16 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-24T13:32:46 IST" name="Default suite" finished-at="2024-11-24T13:32:53 IST" duration-ms="6318">
+  <suite started-at="2024-11-30T09:54:31 IST" name="Default suite" finished-at="2024-11-30T09:54:33 IST" duration-ms="2648">
     <groups>
     </groups>
-    <test started-at="2024-11-24T13:32:46 IST" name="Default test" finished-at="2024-11-24T13:32:53 IST" duration-ms="6318">
-      <class name="com.RestAPITesting.TestHotelAPIs">
-        <test-method signature="createTokenUsingPojo()[pri:0, instance:com.RestAPITesting.TestHotelAPIs@48f278eb]" started-at="2024-11-24T13:32:46 IST" name="createTokenUsingPojo" finished-at="2024-11-24T13:32:53 IST" duration-ms="6254" status="PASS">
+    <test started-at="2024-11-30T09:54:31 IST" name="Default test" finished-at="2024-11-30T09:54:33 IST" duration-ms="2648">
+      <class name="com.NewScenarios.Headres_CookiesValidation">
+        <test-method signature="validateCookies()[pri:0, instance:com.NewScenarios.Headres_CookiesValidation@48f278eb]" started-at="2024-11-30T09:54:31 IST" name="validateCookies" finished-at="2024-11-30T09:54:33 IST" duration-ms="2581" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createTokenUsingPojo -->
-      </class> <!-- com.RestAPITesting.TestHotelAPIs -->
+        </test-method> <!-- validateCookies -->
+      </class> <!-- com.NewScenarios.Headres_CookiesValidation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

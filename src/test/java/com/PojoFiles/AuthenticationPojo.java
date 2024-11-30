@@ -1,4 +1,4 @@
-package com.RestAPITesting;
+package com.PojoFiles;
 
 public class AuthenticationPojo
 {

@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.RestAPITesting.RequestWithBDD">
+      <class name="com.test.Query_PathParam">
         <methods>
-          <include name="testListOfObjects"/>
+          <include name="testQuerypathparam"/>
         </methods>
-      </class> <!-- com.RestAPITesting.RequestWithBDD -->
+      </class> <!-- com.test.Query_PathParam -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
