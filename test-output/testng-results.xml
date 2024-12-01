@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-30T09:54:31 IST" name="Default suite" finished-at="2024-11-30T09:54:33 IST" duration-ms="2648">
+  <suite started-at="2024-12-01T20:36:39 IST" name="Default suite" finished-at="2024-12-01T20:36:46 IST" duration-ms="6561">
     <groups>
     </groups>
-    <test started-at="2024-11-30T09:54:31 IST" name="Default test" finished-at="2024-11-30T09:54:33 IST" duration-ms="2648">
-      <class name="com.NewScenarios.Headres_CookiesValidation">
-        <test-method signature="validateCookies()[pri:0, instance:com.NewScenarios.Headres_CookiesValidation@48f278eb]" started-at="2024-11-30T09:54:31 IST" name="validateCookies" finished-at="2024-11-30T09:54:33 IST" duration-ms="2581" status="PASS">
+    <test started-at="2024-12-01T20:36:39 IST" name="Default test" finished-at="2024-12-01T20:36:46 IST" duration-ms="6561">
+      <class name="com.NewScenarios.AuthrizationTypes">
+        <test-method signature="OAuth2Test()[pri:0, instance:com.NewScenarios.AuthrizationTypes@a530d0a]" started-at="2024-12-01T20:36:39 IST" name="OAuth2Test" finished-at="2024-12-01T20:36:46 IST" duration-ms="6485" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCookies -->
-      </class> <!-- com.NewScenarios.Headres_CookiesValidation -->
+        </test-method> <!-- OAuth2Test -->
+      </class> <!-- com.NewScenarios.AuthrizationTypes -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
